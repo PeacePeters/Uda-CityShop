@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: udacityshop-dev
+  namespace: argocd
+spec:
+  destination:
+    namespace: dev
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: kubernetes-manifests/dev
+    repoURL: https://github.com/PeacePeters/Uda-CityShop
+    targetRevision: HEAD
+  # Sync policy
+  syncPolicy:
+    automated: {}
