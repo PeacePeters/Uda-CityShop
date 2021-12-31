@@ -16,7 +16,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: agilestrategist/currencyservice:latest
+        image: agilestrategist/currencyservice:sha-5706462
         ports:
         - name: grpc
           containerPort: 7000

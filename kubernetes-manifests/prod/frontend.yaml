@@ -15,7 +15,7 @@ spec:
       serviceAccountName: default
       containers:
         - name: server
-          image: agilestrategist/frontend:latest
+          image: agilestrategist/frontend:sha-5706462
           ports:
           - containerPort: 8080
           readinessProbe:
